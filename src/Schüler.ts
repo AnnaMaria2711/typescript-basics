@@ -9,9 +9,11 @@ type Student = {
 
 
 function printStudent( student:Student): void{
-//console.log(student);
-    console.log(student.firstName + " " + student.name + " (" + student.age + ") \n" + "============================== \n" )
+    const studentString = student.firstName + " " + student.name + " (" + student.age + ")"
     let output = " ";
+    console.log(studentString)
+    let equals = "=".repeat(studentString.length);
+    console.log(equals);
     for (let i = 0; i< student.grades.length; i++){
         if (student.grades[i]){
             output += student.grades[i] + ", "
@@ -23,7 +25,6 @@ function printStudent( student:Student): void{
     }
     console.log("Noten:\n" + output)
 }
-//const printStudent2 = console.log;
 
 const student: Student={
     firstName: "Johann",
